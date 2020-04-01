@@ -11,10 +11,16 @@ const app = new Vue({
     },
     methods:{
         agregarFruta(){
-            this.frutas.push({
-                nombre:this.nuevaFruta,
-                cantidad:0,
-            });
+            if(this.nuevaFruta){
+                this.frutas.push({
+                    nombre:this.nuevaFruta,
+                    cantidad:0,
+                });
+
+                this.nuevaFruta = '';
+            }
+           
+       
         },
     },
 });
